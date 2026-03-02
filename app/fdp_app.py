@@ -1,10 +1,11 @@
+from pathlib import Path
+import joblib
 import tracemalloc
 import streamlit as st 
 import numpy as np 
 import pandas as pd
 from datetime import datetime
 import calendar
-import joblib 
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
@@ -15,6 +16,7 @@ tracemalloc.start()
 st.set_page_config(page_title='FSP@streamlit', layout='centered')
 
 # Custom CSS to change the selector label color to purple
+
 st.markdown(
     """
     <style>
@@ -40,16 +42,16 @@ st.markdown(
 )
 
 @st.cache_resource
-def load_model_and_preprocessor(): 
-    model_path = 'GradientBoosting_best_model_full.pkl'
-    preprocessor_path = 'preprocessor_full.pkl'
-    
+def load_model_and_preprocessor():
+    base_dir = Path(__file__).resolve().parent 
+
+    model_path = base_dir / "GradientBoosting_best_model_full.pkl"
+    preprocessor_path = base_dir / "preprocessor_full.pkl"
+
     model = joblib.load(model_path)
     preprocessor = joblib.load(preprocessor_path)
-    
-    return model, preprocessor
 
-model, preprocessor = load_model_and_preprocessor()
+    return model, preprocessor
 
 # Function to preprocess user input 
 def flightPredict(input_data): 

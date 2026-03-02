@@ -1,14 +1,65 @@
-# Objective
-The goal of this project is to develop and deploy an ML model in which an end user can specify a set of features describing a commercial flight of interest and receive a categorical (yes or no) output indicating if that flight will be delayed more than fifteen minutes or not.
+## Flight Delay Predictor (15+ Minutes)
 
-The goal is not to simply focusing on building the most complex and advanced model, but to make a working project/product to help collaborators get exposed to the entire lifecycle of a data science project and have them work as a team and learn new skills.
+### The objective is to demonstrate the complete lifecycle of a practical machine learning solution.
 
-# Project Phases
-1. Data Collection
-2. Data Preprocessing
-3. EDA
-4. Feature Selection
-5. Model Selection
-6. Model Creation
-7. Model Evaluation and Optimization
-8. Model Deployment
+This project implements an end-to-end machine learning workflow to predict whether a commercial flight will be delayed by more than 15 minutes (binary classification).
+
+The objective is to demonstrate the complete lifecycle of a practical machine learning solution -  from raw data exploration to model deployment, with a focus on reproducibility and interpretability.
+
+The application allows an end user to specify flight characteristics and receive a prediction indicating whether the flight is likely to be delayed.
+
+## Project Overview
+
+The project covers the full machine learning pipeline:
+
+- Data exploration and preprocessing
+- Feature engineering and selection
+- Model training and evaluation
+- Model interpretability using SHAP
+- Model packaging and deployment
+
+The final model is deployed in a lightweight Streamlit application that loads the trained model and preprocessing pipeline to generate predictions.
+
+## Repository Structure
+app/
+Streamlit interface
+Trained model
+Preprocessing pipeline
+
+notebooks/
+Data exploration
+Feature engineering
+Model selection
+Model evaluation
+Model interpretability
+
+requirements.txt
+Project dependencies
+
+## Machine Learning Approach
+
+Multiple classification algorithms were evaluated to identify the best-performing model.
+The selected model is a **Gradient Boosting classifier**, chosen based on evaluation metrics and robustness.
+Model interpretability was analyzed using **SHAP (Shapley Additive Explanations)** to understand the main drivers of flight delays.
+
+## Dataset
+
+The original dataset used for training is not included in this repository.
+The notebooks document the full workflow and can be reused with similar public flight delay datasets.
+
+## Key Features
+
+- End-to-end ML workflow
+- Reproducible training process
+- Model interpretability with SHAP
+- Packaged preprocessing pipeline
+- Deployable prediction interface
+
+## Limitations
+
+- The project uses historical flight data and does not incorporate real-time information such as weather or operational disruptions.
+- The application is designed as a demonstration of the ML workflow and is not intended as a production system.
+
+## Motivation
+
+This project was developed as part of my transition into Data & AI, with the goal of building practical end-to-end solutions that combine data preparation, machine learning, and deployment.
