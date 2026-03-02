@@ -63,3 +63,12 @@ The notebooks document the full workflow and can be reused with similar public f
 ## Motivation
 
 This project was developed as part of my transition into Data & AI, with the goal of building practical end-to-end solutions that combine data preparation, machine learning, and deployment.
+
+## Environment
+
+This project was developed and tested on Windows 11 with:
+- Python 3.11
+- Streamlit 1.37
+- Scikit-learn 1.4
+- Pandas 2.2
+- NumPy 2.1
