@@ -1,5 +1,8 @@
 ## Flight Delay Predictor (15+ Minutes)
 
+## App demo
+![alt text](image.png)
+
 ### The objective is to demonstrate the complete lifecycle of a practical machine learning solution.
 
 This project implements an end-to-end machine learning workflow to predict whether a commercial flight will be delayed by more than 15 minutes (binary classification).
